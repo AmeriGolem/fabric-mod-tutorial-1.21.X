@@ -4,7 +4,7 @@
   "cookingtime": 200,
   "experience": 0.2,
   "group": "pink_garnet",
-  "ingedient": {
+  "ingredient": {
     "item": "tutorialmod:raw_pink_garnet"
   },
   "result": {
