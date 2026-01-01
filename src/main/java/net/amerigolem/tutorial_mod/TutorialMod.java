@@ -1,5 +1,7 @@
 package net.amerigolem.tutorial_mod;
 
+import net.amerigolem.tutorial_mod.block.ModBlocks;
+import net.amerigolem.tutorial_mod.items.ModItemGroups;
 import net.amerigolem.tutorial_mod.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -12,6 +14,9 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
+
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
