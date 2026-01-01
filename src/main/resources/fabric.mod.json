@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorialmod",
+	"version": "${version}",
+	"name": "TutorialMod",
+	"description": "This is a tutorial by Amerigo Berlenghi",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/tutorialmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.amerigolem.tutorial_mod.TutorialMod"
+		],
+		"fabric-datagen": [
+			"net.amerigolem.tutorial_mod.TutorialModDataGenerator"
+		],
+		"client": [
+			"net.amerigolem.tutorial_mod.TutorialModClient"
+		]
+
+	},
+	"mixins": [
+		"tutorialmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
