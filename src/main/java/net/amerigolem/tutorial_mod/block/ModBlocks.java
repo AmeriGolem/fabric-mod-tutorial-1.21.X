@@ -1,6 +1,7 @@
 package net.amerigolem.tutorial_mod.block;
 
 import net.amerigolem.tutorial_mod.TutorialMod;
+import net.amerigolem.tutorial_mod.block.custom.MagicBlock;
 import net.amerigolem.tutorial_mod.item.ModItemGroups;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -34,6 +35,10 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(3,6),
                     AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create().strength(1f).requiresTool()));
+
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
@@ -53,6 +58,7 @@ public class ModBlocks {
             entries.add(CYAN_BRICK_BLOCK);
             entries.add(PINK_GARNET_ORE);
             entries.add(PINK_GARNET_DEEPSLATE_ORE);
+            entries.add(MAGIC_BLOCK);
         });
 
     }
