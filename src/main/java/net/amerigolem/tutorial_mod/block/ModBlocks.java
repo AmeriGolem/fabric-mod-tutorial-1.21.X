@@ -1,7 +1,7 @@
 package net.amerigolem.tutorial_mod.block;
 
 import net.amerigolem.tutorial_mod.TutorialMod;
-import net.amerigolem.tutorial_mod.items.ModItemGroups;
+import net.amerigolem.tutorial_mod.item.ModItemGroups;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;

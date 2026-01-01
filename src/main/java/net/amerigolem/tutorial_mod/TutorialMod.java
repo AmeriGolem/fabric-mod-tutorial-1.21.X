@@ -1,8 +1,8 @@
 package net.amerigolem.tutorial_mod;
 
 import net.amerigolem.tutorial_mod.block.ModBlocks;
-import net.amerigolem.tutorial_mod.items.ModItemGroups;
-import net.amerigolem.tutorial_mod.items.ModItems;
+import net.amerigolem.tutorial_mod.item.ModItemGroups;
+import net.amerigolem.tutorial_mod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;

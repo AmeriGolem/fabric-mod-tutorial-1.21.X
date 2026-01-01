@@ -1,4 +1,4 @@
-package net.amerigolem.tutorial_mod.items;
+package net.amerigolem.tutorial_mod.item;
 
 import net.amerigolem.tutorial_mod.TutorialMod;
 
