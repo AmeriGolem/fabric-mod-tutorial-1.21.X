@@ -1,6 +1,7 @@
 package net.amerigolem.tutorial_mod;
 
 import net.amerigolem.tutorial_mod.block.ModBlocks;
+import net.amerigolem.tutorial_mod.component.ModDataComponentTypes;
 import net.amerigolem.tutorial_mod.item.ModItemGroups;
 import net.amerigolem.tutorial_mod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -19,6 +20,7 @@ public class TutorialMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModDataComponentTypes.registerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 2400);
 	}

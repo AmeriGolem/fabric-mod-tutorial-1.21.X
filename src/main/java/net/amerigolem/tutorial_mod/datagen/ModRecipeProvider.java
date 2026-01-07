@@ -113,6 +113,104 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
                 .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.COMBAT,
+                        ModItems.PINK_GARNET_SWORD
+                )
+                .pattern("g")
+                .pattern("g")
+                .pattern("s")
+                .input('g', ModItems.PINK_GARNET)
+                .input('s', Items.STICK)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.TOOLS,
+                        ModItems.PINK_GARNET_PICKAXE
+                )
+                .pattern("ggg")
+                .pattern(" s ")
+                .pattern(" s ")
+                .input('g', ModItems.PINK_GARNET)
+                .input('s', Items.STICK)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.TOOLS,
+                        ModItems.PINK_GARNET_AXE
+                )
+                .pattern("gg")
+                .pattern("sg")
+                .pattern("s ")
+                .input('g', ModItems.PINK_GARNET)
+                .input('s', Items.STICK)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter, Identifier.of("right_pink_garnet_axe"));
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.TOOLS,
+                        ModItems.PINK_GARNET_AXE
+                )
+                .pattern("gg")
+                .pattern("gs")
+                .pattern(" s")
+                .input('g', ModItems.PINK_GARNET)
+                .input('s', Items.STICK)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter, Identifier.of("left_pink_garnet_axe"));
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.TOOLS,
+                        ModItems.PINK_GARNET_SHOVEL
+                )
+                .pattern("g")
+                .pattern("s")
+                .pattern("s")
+                .input('g', ModItems.PINK_GARNET)
+                .input('s', Items.STICK)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.TOOLS,
+                        ModItems.PINK_GARNET_HOE
+                )
+                .pattern("gg")
+                .pattern("s ")
+                .pattern("s ")
+                .input('g', ModItems.PINK_GARNET)
+                .input('s', Items.STICK)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter, Identifier.of("right_pink_garnet_hoe"));
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.TOOLS,
+                        ModItems.PINK_GARNET_HOE
+                )
+                .pattern("gg")
+                .pattern(" s")
+                .pattern(" s")
+                .input('g', ModItems.PINK_GARNET)
+                .input('s', Items.STICK)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter, Identifier.of("left_pink_garnet_hoe"));
 
     }
 }

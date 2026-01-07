@@ -1,6 +1,7 @@
 package net.amerigolem.tutorial_mod.item.custom;
 
 import net.amerigolem.tutorial_mod.block.ModBlocks;
+import net.amerigolem.tutorial_mod.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
@@ -50,6 +51,7 @@ public class ChiselItem extends Item {
 
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS);
 
+                context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
             }
         }
 
@@ -63,6 +65,11 @@ public class ChiselItem extends Item {
         } else {
             tooltip.add(Text.translatable("tooltip.tutorialmod.chisel"));
         }
+
+        if(stack.get(ModDataComponentTypes.COORDINATES) != null) {
+            tooltip.add(Text.literal("Last Block Changed at " + stack.get(ModDataComponentTypes.COORDINATES)));
+        }
+
         super.appendTooltip(stack, context, tooltip, type);
     }
 }
