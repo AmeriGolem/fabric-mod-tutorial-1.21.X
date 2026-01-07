@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "b": {
+      "item": "minecraft:brick"
+    },
+    "d": {
+      "item": "minecraft:cyan_dye"
+    }
+  },
+  "pattern": [
+    " b ",
+    "bdb",
+    " b "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:cyan_brick_block"
+  }
+}

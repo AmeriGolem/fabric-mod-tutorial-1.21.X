@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_Ender_Pearl_or_Blaze_Rod": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:ender_pearl"
+          },
+          {
+            "items": "minecraft:blaze_rod"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tutorialmod:dash_wand"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_Ender_Pearl_or_Blaze_Rod"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tutorialmod:dash_wand"
+    ]
+  }
+}

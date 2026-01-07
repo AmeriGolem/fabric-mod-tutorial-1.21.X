@@ -2,6 +2,7 @@ package net.amerigolem.tutorial_mod.block;
 
 import net.amerigolem.tutorial_mod.TutorialMod;
 import net.amerigolem.tutorial_mod.block.custom.MagicBlock;
+import net.amerigolem.tutorial_mod.block.custom.PinkGarnetLampBlock;
 import net.amerigolem.tutorial_mod.item.ModItemGroups;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
@@ -61,6 +62,9 @@ public class ModBlocks {
     public static final Block PINK_GARNET_TRAPDOOR = registerBlock("pink_garnet_trapdoor",
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().strength(2f).requiresTool().nonOpaque()));
 
+    public static final Block PINK_GARNET_LAMP = registerBlock("pink_garnet_lamp",
+            new PinkGarnetLampBlock(AbstractBlock.Settings.create()
+                    .strength(1f).requiresTool().luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)));
 
 
 
@@ -99,6 +103,7 @@ public class ModBlocks {
             entries.add(PINK_GARNET_DOOR);
             entries.add(PINK_GARNET_TRAPDOOR);
 
+            entries.add(PINK_GARNET_LAMP);
         });
 
     }
