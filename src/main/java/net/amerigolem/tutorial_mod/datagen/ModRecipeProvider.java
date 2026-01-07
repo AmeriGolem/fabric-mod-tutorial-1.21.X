@@ -212,5 +212,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 )
                 .offerTo(recipeExporter, Identifier.of("left_pink_garnet_hoe"));
 
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.TOOLS,
+                        ModItems.PINK_GARNET_HAMMER
+                )
+                .pattern("ggg")
+                .pattern("gsg")
+                .pattern(" s ")
+                .input('g', ModItems.PINK_GARNET)
+                .input('s', Items.STICK)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter);
+
     }
 }

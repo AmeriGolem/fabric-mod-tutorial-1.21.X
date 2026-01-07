@@ -1,6 +1,7 @@
 package net.amerigolem.tutorial_mod.item;
 
 import net.amerigolem.tutorial_mod.TutorialMod;
+import net.amerigolem.tutorial_mod.block.custom.HammerItem;
 import net.amerigolem.tutorial_mod.item.custom.ChiselItem;
 import net.amerigolem.tutorial_mod.item.custom.DashWand;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -46,6 +47,11 @@ public class ModItems {
             new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 0, -3f))));
 
+
+    public static final Item PINK_GARNET_HAMMER = registerItem("pink_garnet_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -3.4f))));
+
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
@@ -67,6 +73,7 @@ public class ModItems {
             entries.add(PINK_GARNET_AXE);
             entries.add(PINK_GARNET_SHOVEL);
             entries.add(PINK_GARNET_HOE);
+            entries.add(PINK_GARNET_HAMMER);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register( entries -> {

@@ -4,8 +4,10 @@ import net.amerigolem.tutorial_mod.block.ModBlocks;
 import net.amerigolem.tutorial_mod.component.ModDataComponentTypes;
 import net.amerigolem.tutorial_mod.item.ModItemGroups;
 import net.amerigolem.tutorial_mod.item.ModItems;
+import net.amerigolem.tutorial_mod.util.HammerUsageEvent;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,5 +25,8 @@ public class TutorialMod implements ModInitializer {
 		ModDataComponentTypes.registerDataComponentTypes();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 2400);
+
+
+		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}
 }
