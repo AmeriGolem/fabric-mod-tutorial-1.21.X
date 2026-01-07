@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "g": {
+      "item": "tutorialmod:pink_garnet"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ggg",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:pink_garnet_pickaxe"
+  }
+}
