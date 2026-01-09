@@ -1,5 +1,6 @@
 package net.amerigolem.tutorial_mod.item.custom;
 
+import net.amerigolem.tutorial_mod.util.DashLandingTracker;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -26,6 +27,8 @@ public class DashWand extends Item {
             Vec3d lookVector = user.getRotationVector();
             user.addVelocity(lookVector.multiply(VELOCITY));
             user.velocityModified = true; // IMPORTANT
+
+            DashLandingTracker.startDash(user); // ⭐ save Y + activate flag
 
             stack.damage(1, user, EquipmentSlot.MAINHAND);
 

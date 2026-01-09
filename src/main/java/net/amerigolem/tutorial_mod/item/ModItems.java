@@ -4,6 +4,7 @@ import net.amerigolem.tutorial_mod.TutorialMod;
 import net.amerigolem.tutorial_mod.block.custom.HammerItem;
 import net.amerigolem.tutorial_mod.item.custom.ChiselItem;
 import net.amerigolem.tutorial_mod.item.custom.DashWand;
+import net.amerigolem.tutorial_mod.item.custom.ModArmorMaterials;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
@@ -52,6 +53,19 @@ public class ModItems {
             new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -3.4f))));
 
+    public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
+    public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(15))));
+    public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(15))));
+    public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(15))));
+
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
@@ -74,15 +88,27 @@ public class ModItems {
             entries.add(PINK_GARNET_SHOVEL);
             entries.add(PINK_GARNET_HOE);
             entries.add(PINK_GARNET_HAMMER);
+            entries.add(PINK_GARNET_HELMET);
+            entries.add(PINK_GARNET_CHESTPLATE);
+            entries.add(PINK_GARNET_LEGGINGS);
+            entries.add(PINK_GARNET_BOOTS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register( entries -> {
             entries.add(CAULIFLOWER);
         });
 
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register( entries -> {
+            entries.add(PINK_GARNET_HAMMER);
+        });
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register( entries -> {
             entries.add(PINK_GARNET_SWORD);
             entries.add(PINK_GARNET_AXE);
+            entries.add(PINK_GARNET_HELMET);
+            entries.add(PINK_GARNET_CHESTPLATE);
+            entries.add(PINK_GARNET_LEGGINGS);
+            entries.add(PINK_GARNET_BOOTS);
         });
     }
 }

@@ -227,5 +227,56 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 )
                 .offerTo(recipeExporter);
 
+
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.COMBAT,
+                        ModItems.PINK_GARNET_HELMET
+                )
+                .pattern("ggg")
+                .pattern("g g")
+                .input('g', ModItems.PINK_GARNET)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.COMBAT,
+                        ModItems.PINK_GARNET_CHESTPLATE
+                )
+                .pattern("g g")
+                .pattern("ggg")
+                .pattern("ggg")
+                .input('g', ModItems.PINK_GARNET)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.COMBAT,
+                        ModItems.PINK_GARNET_LEGGINGS
+                )
+                .pattern("ggg")
+                .pattern("g g")
+                .pattern("g g")
+                .input('g', ModItems.PINK_GARNET)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter);
+        ShapedRecipeJsonBuilder.create(
+                        RecipeCategory.COMBAT,
+                        ModItems.PINK_GARNET_BOOTS
+                )
+                .pattern("g g")
+                .pattern("g g")
+                .input('g', ModItems.PINK_GARNET)
+                .criterion(
+                        hasItem(ModItems.PINK_GARNET),
+                        conditionsFromItem(ModItems.PINK_GARNET)
+                )
+                .offerTo(recipeExporter);
     }
 }
