@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "g": {
+      "item": "tutorialmod:pink_garnet"
+    }
+  },
+  "pattern": [
+    "ggg",
+    "g g"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:pink_garnet_helmet"
+  }
+}
